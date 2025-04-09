@@ -12,10 +12,19 @@ Pod::Spec.new do |s|
         :http => 'https://gitlab.com/qliqpub/qliqflutter.ffmpeg/-/raw/main/ios/ffmpeg-kit-ios-bundle.zip'
    }
 
-  s.vendored_frameworks = 'ffmpeg-kit.xcframework'
+  s.vendored_frameworks = [
+    'ffmpegkit.xcframework',
+    'libavcodec.xcframework',
+    'libavdevice.xcframework',
+    'libavfilter.xcframework',
+    'libavformat.xcframework',
+    'libavutil.xcframework',
+    'libswresample.xcframework',
+    'libswscale.xcframework'
+  ]
 
-    s.pod_target_xcconfig = {
-      'DEFINES_MODULE' => 'YES',
-      'CLANG_MODULES_AUTOLINK' => 'YES'
-    }
+  s.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES',
+    'CLANG_MODULES_AUTOLINK' => 'YES'
+  }
 end

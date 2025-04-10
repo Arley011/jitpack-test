@@ -3,13 +3,25 @@ plugins {
 }
 
 group = 'com.github.qliqsoft'
-version = '6.0-4'
+version = '6.0-6'
 
 publishing {
     publications {
-        aarRelease(MavenPublication) {
+        ffmpegKit(MavenPublication) {
             artifactId = 'ffmpeg-kit'
             artifact file('android/ffmpeg-kit.aar')
+        }
+
+        smartCommon(MavenPublication) {
+            artifactId = 'smart-exception-common'
+            version = '0.2.1'
+            artifact file('android/smart-exception-common-0.2.1.jar')
+        }
+
+        smartJava(MavenPublication) {
+            artifactId = 'smart-exception-java'
+            version = '0.2.1'
+            artifact file('android/smart-exception-java-0.2.1.jar')
         }
     }
 }

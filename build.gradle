@@ -9,7 +9,7 @@ publishing {
     publications {
         aarRelease(MavenPublication) {
             artifactId = 'ffmpeg-kit'
-            artifact file('libs/ffmpeg-kit.aar')
+            artifact file('android/ffmpeg-kit.aar')
         }
     }
 }

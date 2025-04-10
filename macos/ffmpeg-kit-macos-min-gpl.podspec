@@ -7,20 +7,20 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'GPL-3.0' }
   s.author           = { 'ARTHENICA' => 'open-source@arthenica.com' }
 
-  s.platform     = :macos, '10.5'
+  s.platform            = :osx
   s.source       = {
         :http => 'https://gitlab.com/qliqpub/qliqflutter.ffmpeg/-/raw/main/macos/ffmpeg-kit-macos-bundle.zip'
    }
 
   s.vendored_frameworks = [
-    'ffmpegkit.xcframework',
-    'libavcodec.xcframework',
     'libavdevice.xcframework',
+    'libswresample.xcframework',
+    'libswscale.xcframework',
     'libavfilter.xcframework',
     'libavformat.xcframework',
-    'libavutil.xcframework',
-    'libswresample.xcframework',
-    'libswscale.xcframework'
+    'libavcodec.xcframework',
+    'ffmpegkit.xcframework',
+    'libavutil.xcframework'
   ]
 
   s.pod_target_xcconfig = {

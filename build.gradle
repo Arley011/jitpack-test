@@ -1,0 +1,15 @@
+plugins {
+    id 'maven-publish'
+}
+
+group = 'com.github.qliqsoft'
+version = '6.0-2'
+
+publishing {
+    publications {
+        fullBinary(MavenPublication) {
+            artifactId = 'full_binary'
+            artifact file('com/local/ffmpeg-kit/full_binary/6.0-2/full_binary-6.0-2.aar')
+        }
+    }
+}

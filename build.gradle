@@ -3,13 +3,13 @@ plugins {
 }
 
 group = 'com.github.qliqsoft'
-version = '6.0-2'
+version = '6.0-4'
 
 publishing {
     publications {
-        fullBinary(MavenPublication) {
-            artifactId = 'full_binary'
-            artifact file('com/local/ffmpeg-kit/full_binary/6.0-2/full_binary-6.0-2.aar')
+        aarRelease(MavenPublication) {
+            artifactId = 'ffmpeg-kit'
+            artifact file('libs/ffmpeg-kit.aar')
         }
     }
 }
